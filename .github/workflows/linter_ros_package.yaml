@@ -52,7 +52,7 @@ jobs:
       - name: Check out source repository
         uses: actions/checkout@v2
       - name: Download config
-        run: wget https://raw.githubusercontent.com/sbgisen/.github/main/.clang-format
+        run: wget https://raw.githubusercontent.com/h-wata/.github/main/.clang-format
       - uses: DoozyX/clang-format-lint-action@2a28e3a8d9553f244243f7e1ff94f6685dff87be # v0.12
         with:
           source: "."
@@ -106,7 +106,7 @@ jobs:
       - name: Check out source repository
         uses: actions/checkout@v2
       - name: Download config
-        run: wget https://raw.githubusercontent.com/sbgisen/.github/main/.cmake-format
+        run: wget https://raw.githubusercontent.com/h-wata/.github/main/.cmake-format
       - name: cmake-format
         uses: PuneetMatharu/cmake-format-lint-action@868082b20873d65687e64a4807ea342d1844c4c7
         with:
@@ -126,7 +126,7 @@ jobs:
       - name: Check out source repository
         uses: actions/checkout@v2
       - name: Download config
-        run: wget https://raw.githubusercontent.com/sbgisen/.github/main/.yamllint
+        run: wget https://raw.githubusercontent.com/h-wata/.github/main/.yamllint
       - name: yamllint
         uses: reviewdog/action-yamllint@aabd7aef24430a8da23122ca6711faec445dfcf6 # v1.4.0
         with:
