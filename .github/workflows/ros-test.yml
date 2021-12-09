@@ -35,7 +35,8 @@ jobs:
           files=`find . -type f -regextype posix-egrep -regex "\./.+\.rosinstall"`
           while [ `echo ${files} | wc -w` -gt 0 ]
           do
-            echo ${files} | xargs -n1 sh -c 'vcs import --recursive --debug < {}'
+            echo ${files} | xargs -i sh -c 'echo {}'
+            echo ${files} | xargs -i sh -c 'vcs import  --input {} --recursive --debug'
             rm ${files}
             files=`find . -type f -regextype posix-egrep -regex "\./.+\.rosinstall"`
           done
